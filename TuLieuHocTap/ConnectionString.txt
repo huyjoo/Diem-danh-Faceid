@@ -1,0 +1,1 @@
+﻿Data Source=HUYPRO\SQLEXPRESS;Initial Catalog=DIEM_DANH;Integrated Security=True

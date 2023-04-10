@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53D980A7-BE4F-477D-BA33-8E5224A31061}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TuLieuHocTap</RootNamespace>
+    <AssemblyName>TuLieuHocTap</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV">
+      <HintPath>..\opencv\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\opencv\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>..\opencv\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaNhanGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaNhanGiangVien.Designer.cs">
+      <DependentUpon>CaNhanGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CaNhanSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaNhanSinhVien.Designer.cs">
+      <DependentUpon>CaNhanSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyMonHoc.Designer.cs">
+      <DependentUpon>DangKyMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DIEM_DANHDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DIEM_DANHDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong.Designer.cs">
+      <DependentUpon>HeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeGiangVien.Designer.cs">
+      <DependentUpon>HomeGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeSinhVien.Designer.cs">
+      <DependentUpon>HomeSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichDay.Designer.cs">
+      <DependentUpon>LichDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuDangNhap.Designer.cs">
+      <DependentUpon>LichSuDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LopHocVaMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LopHocVaMonHoc.Designer.cs">
+      <DependentUpon>LopHocVaMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien.Designer.cs">
+      <DependentUpon>SinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemSinhVien.Designer.cs">
+      <DependentUpon>ThemSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiemDanh.Designer.cs">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EigenObjectRecognizer.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThoiKhoaBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThoiKhoaBieu.Designer.cs">
+      <DependentUpon>ThoiKhoaBieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThoiKhoaBieuSV.Designer.cs">
+      <DependentUpon>ThoiKhoaBieuSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XacMinhGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XacMinhGV.Designer.cs">
+      <DependentUpon>XacMinhGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XacMinhSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XacMinhSinhVien.Designer.cs">
+      <DependentUpon>XacMinhSinhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CaNhanGiangVien.resx">
+      <DependentUpon>CaNhanGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaNhanSinhVien.resx">
+      <DependentUpon>CaNhanSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKyMonHoc.resx">
+      <DependentUpon>DangKyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong.resx">
+      <DependentUpon>HeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeGiangVien.resx">
+      <DependentUpon>HomeGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeSinhVien.resx">
+      <DependentUpon>HomeSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichDay.resx">
+      <DependentUpon>LichDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuDangNhap.resx">
+      <DependentUpon>LichSuDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LopHocVaMonHoc.resx">
+      <DependentUpon>LopHocVaMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVien.resx">
+      <DependentUpon>SinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemSinhVien.resx">
+      <DependentUpon>ThemSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiemDanh.resx">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ThoiKhoaBieu.resx">
+      <DependentUpon>ThoiKhoaBieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThoiKhoaBieuSV.resx">
+      <DependentUpon>ThoiKhoaBieuSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacMinhGV.resx">
+      <DependentUpon>XacMinhGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacMinhSinhVien.resx">
+      <DependentUpon>XacMinhSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DIEM_DANHDataSet.xsc">
+      <DependentUpon>DIEM_DANHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet.xss">
+      <DependentUpon>DIEM_DANHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet1.xsc">
+      <DependentUpon>DIEM_DANHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet1.xss">
+      <DependentUpon>DIEM_DANHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet2.xsc">
+      <DependentUpon>DIEM_DANHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet2.xss">
+      <DependentUpon>DIEM_DANHDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet31.xsc">
+      <DependentUpon>DIEM_DANHDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet31.xss">
+      <DependentUpon>DIEM_DANHDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet4.xsc">
+      <DependentUpon>DIEM_DANHDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet4.xss">
+      <DependentUpon>DIEM_DANHDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet5.xsc">
+      <DependentUpon>DIEM_DANHDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DIEM_DANHDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DIEM_DANHDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DIEM_DANHDataSet5.xss">
+      <DependentUpon>DIEM_DANHDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConnectionString.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cv110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cvaux110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cvextern.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cxcore110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="haarcascade-frontalface-default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="haarcascade_eye.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="haarcascade_frontalface_alt_tree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="haarcascade_mcs_eyepair_big.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="highgui110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="mouth.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="names.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="nose.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_calib3d220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_contrib220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_core220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_features2d220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_flann220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_gpu220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_highgui220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_imgproc220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_legacy220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ml220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_objdetect220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_video220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\xacminhdanhtinh.png" />
+    <None Include="Resources\xacminh32.png" />
+    <None Include="Resources\Xacminh.png" />
+    <None Include="Resources\xacminhcode.gif" />
+    <None Include="Resources\tao32.png" />
+    <None Include="Resources\ThemTL32.png" />
+    <None Include="Resources\NhapFile32.png" />
+    <None Include="Resources\XuatFile32.png" />
+    <None Include="Resources\TimKhoa32.png" />
+    <None Include="Resources\Tim32.png" />
+    <None Include="Resources\Luu321.png" />
+    <None Include="Resources\Reset32.png" />
+    <None Include="Resources\Sua32.png" />
+    <None Include="Resources\Xoa32.png" />
+    <None Include="Resources\them32.png" />
+    <None Include="Resources\Luu32.png" />
+    <None Include="Resources\Luu64.png" />
+    <None Include="Resources\MoCamera.png" />
+    <None Include="Resources\ThoiKhoaBieu.png" />
+    <None Include="Resources\GiangVien.png" />
+    <None Include="Resources\LichSuDangNhap.png" />
+    <None Include="Resources\ChupAnh.png" />
+    <None Include="Resources\LamMoi32.png" />
+    <None Include="Resources\DangKi.png" />
+    <None Include="Resources\canhan64.png" />
+    <None Include="Resources\diemdanh64.png" />
+    <None Include="Resources\loginGif.gif" />
+    <Content Include="Resources\LogoApp.ico" />
+    <None Include="Resources\SinhVien.png" />
+    <None Include="Resources\LopHoc.png" />
+    <None Include="Resources\themSV.png" />
+    <None Include="Resources\LogoApp.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\andanh.png" />
+    <None Include="Resources\Sinh vien hutech.jpg" />
+    <None Include="Resources\Giang_Vien.png" />
+    <None Include="Resources\Login.jpg" />
+    <None Include="Resources\pass.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\face-recognition-7-722536.png" />
+    <None Include="Resources\Student1.png" />
+    <None Include="Resources\Student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
